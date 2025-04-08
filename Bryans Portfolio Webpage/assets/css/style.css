@@ -1,0 +1,166 @@
+:root {
+    --primary: #FF6B6B;
+    --secondary: #4ECDC4;
+    --dark: #292F36;
+    --light: #F7FFF7;
+    --highlight: #FFE66D;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--dark);
+    padding: 2rem 1rem;
+    box-shadow: 3px 0 15px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Leckerli One', cursive;
+    font-size: 2.2rem; /* Optimal size for this font */
+    color: #FF6B6B; /* Coral color from your palette */
+    text-align: center;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    text-shadow: 
+        2px 2px 0px rgba(255, 230, 109, 0.3), /* Soft yellow shadow */
+        4px 4px 0px rgba(78, 205, 196, 0.2);   /* Mint green shadow */
+    transform: rotate(-2deg); /* Slight playful tilt */
+    display: inline-block; /* Required for transform */
+    line-height: 1;
+    letter-spacing: 0.5px; /* Slightly tighter spacing */
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 1.5rem 0;
+}
+
+.nav-item a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.nav-item a:hover {
+    background-color: var(--primary);
+    transform: translateX(10px);
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 2rem;
+    min-height: 100vh;
+}
+/* Editorial Cartoons Specific Styles */
+.cartoon-caption {
+    padding: 1rem;
+    background: white;
+    border-top: 3px solid var(--highlight);
+}
+
+.cartoon-caption h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--dark);
+}
+
+.cartoon-caption p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Taller images for cartoons */
+.editorial-cartoons .gallery-item img {
+    height: 400px; /* Taller format for vertical cartoons */
+}
+
+/* Gallery styles for portfolio pages */
+.gallery {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    gap: 20px; /* Adds space between videos */
+    width: 100%;
+    max-width: 1000px; /* Optional: Limits max width for better readability */
+    margin: 0 auto; /* Centers the gallery */
+}
+}
+
+.gallery-item {
+	width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.gallery-item video {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    background: #000; 
+}
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Contact page specific */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+}
